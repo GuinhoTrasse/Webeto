@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Formulário</title>
+</head>
+<body>
+  <h1>Formulário de Exemplo</h1>
+
+  <form action="#" method="post">
+    <!-- RADIO: mesmo name = fazem parte do mesmo grupo -->
+    <fieldset>
+      <legend>Gênero (radio + atributo name)</legend>
+
+      <label>
+        <input type="radio" name="genero" value="masculino">
+        Masculino
+      </label>
+
+      <label>
+        <input type="radio" name="genero" value="feminino">
+        Feminino
+      </label>
+
+      <label>
+        <input type="radio" name="genero" value="outro" checked>
+        Outro (padrão)
+      </label>
+    </fieldset>
+
+    <br>
+
+    <!-- CHECKBOX: podem marcar vários ao mesmo tempo -->
+    <fieldset>
+      <legend>Interesses (checkbox)</legend>
+
+      <label>
+        <input type="checkbox" name="interesses" value="html">
+        HTML
+      </label>
+
+      <label>
+        <input type="checkbox" name="interesses" value="css">
+        CSS
+      </label>
+
+      <label>
+        <input type="checkbox" name="interesses" value="javascript">
+        JavaScript
+      </label>
+    </fieldset>
+
+    <br>
+
+    <!-- SELECT + OPTION + OPTGROUP -->
+    <fieldset>
+      <legend>Cidade (select, option e optgroup)</legend>
+
+      <label for="cidade">Escolha sua cidade:</label>
+      <select id="cidade" name="cidade">
+        <optgroup label="Mato Grosso do Sul">
+          <option value="tres-lagoas">Três Lagoas</option>
+          <option value="campo-grande">Campo Grande</option>
+        </optgroup>
+
+        <optgroup label="São Paulo">
+          <option value="saopaulo">São Paulo</option>
+          <option value="campinas">Campinas</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <br>
+
+    <!-- DATALIST: sugestão de itens enquanto digita -->
+    <fieldset>
+      <legend>Linguagem favorita (datalist)</legend>
+
+      <label for="linguagem">Digite a linguagem:</label>
+      <input list="lista-linguagens" id="linguagem" name="linguagem">
+
+      <datalist id="lista-linguagens">
+        <option value="HTML">
+        <option value="CSS">
+        <option value="JavaScript">
+        <option value="Python">
+        <option value="Java">
+      </datalist>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

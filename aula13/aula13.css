@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.box1 {
+    border: 2px solid red;
+    padding: 20px 50px 10px 80px;
+    margin: 20px 50px;
+    background: rgb(124, 23, 124);
+    text-align: right;
+    width: 300px;
+    border-radius: 5px;
+    /* height: 300px; */
+}
+
+
+h1, h3{
+    color: rgb(202, 212, 58);
+    
+
+}
+
+.tabela {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 50px;
+    text-align: center;
+    color: rgb(55, 0, 255);
+    width: 200px;
+    background: rgba(0, 0, 0, 0.295);
+    border-collapse: collapse;   /* para remover as bordas das células */
+    font-size: 18px;
+}
+
+.tabela tr:hover {  /* para mudar a cor da linha ao passar o mouse */
+    background: blueviolet;
+    color: wheat;
+}
+
+.tabela td, .tabela th {
+    border: 1px solid blue;
+    padding: 8px;
+}
+
+.tabela thead tr {
+    background: rgb(216, 213, 34);
+    text-align: center;
+    font-weight: 600;
+}
+
+.tabela caption {
+    font-size: 20px;
+    color: white;
+}

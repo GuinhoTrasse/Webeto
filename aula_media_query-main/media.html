@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Indicador do dispositivo ativo -->
+    <div class="indicador-tela">
+      <span class="badge"></span>
+    </div>
+
+    <header class="cabecalho">
+      <h1>Media Queries: <span>Caixas Aninhadas</span></h1>
+      <p>
+        Exemplo prático com 6 caixas principais. A Caixa 2 e a Caixa 4 contêm
+        mini quadrados aninhados que se adaptam conforme o tamanho da tela.
+      </p>
+    </header>
+    <!-- Container principal -->
+    <main class="container">
+      <!-- Caixa 1 -->
+      <div class="caixa caixa-1">Caixa 1</div>
+
+      <!-- Caixa 2 (com elementos internos) -->
+      <div class="caixa caixa-2">
+        <span class="caixa-titulo">Caixa 2 (Pai)</span>
+        <div class="mini-container">
+          <div class="mini-caixa mini-a">A</div>
+          <div class="mini-caixa mini-b">B</div>
+        </div>
+      </div>
+
+      <!-- Caixa 3 -->
+      <div class="caixa caixa-3">Caixa 3</div>
+
+      <!-- Caixa 4 (com elementos internos) -->
+      <div class="caixa caixa-4">
+        <span class="caixa-titulo">Caixa 4 (Pai)</span>
+        <div class="mini-grid">
+          <div class="mini-caixa mini-c">1</div>
+          <div class="mini-caixa mini-d">2</div>
+          <div class="mini-caixa mini-e">3</div>
+          <div class="mini-caixa mini-f">4</div>
+        </div>
+      </div>
+
+      <!-- Caixa 5 -->
+      <div class="caixa caixa-5">Caixa 5</div>
+
+      <!-- Caixa 6 -->
+      <div class="caixa caixa-6">Caixa 6</div>
+    </main>
+
+    <footer>
+      <p>Aula 18 - Web 1 - Elementos Aninhados</p>
+    </footer>
+  </body>
+</html>

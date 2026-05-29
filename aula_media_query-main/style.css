@@ -1,0 +1,231 @@
+:root {
+  --cor-celular: #6148ec; /* Azul */
+  --cor-tablet: #06b6d4; /* Ciano */
+  --cor-desktop: #10b981; /* Verde */
+  --cor-background: #0f172a;
+}
+
+/* Configurações Globais Básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.cabecalho h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cabecalho h1 span {
+  color: var(--cor-celular); /* Usa a cor do celular por padrão */
+  transition: color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+.cabecalho p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Container Responsivo para as Caixas */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; /* Celular: caixas em coluna única */
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--cor-background);
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.caixa-titulo {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* Estilo Geral dos Mini Quadrados Aninhados (Filhos) */
+.mini-caixa {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Rodapé */
+footer {
+  margin-top: auto;
+  color: #64748b;
+  font-size: 0.85rem;
+  padding: 10px 0;
+}
+
+/* ==========================================================================
+   ESTADO 1: CELULAR (Padrão - Menor que 600px)
+   ========================================================================== */
+
+/* Alturas das caixas no Celular */
+.caixa {
+  height: 120px;
+}
+.caixa-2,
+.caixa-4 {
+  height: 160px;
+}
+
+/* Todas as caixas usam a mesma cor base do celular via var() */
+.caixa {
+  background-color: var(--cor-celular);
+}
+
+/* Estrutura das Mini Caixas internas */
+.mini-container {
+  display: flex;
+  gap: 12px;
+}
+
+.mini-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.mini-caixa {
+  border: 2px solid var(--cor-celular);
+}
+
+/* Indicador dinâmico no topo */
+.indicador-tela {
+  background-color: var(--cor-celular);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  transition: all 0.3s ease;
+}
+
+.indicador-tela .badge::after {
+  content: "Visualização: Celular (tela < 600px)";
+}
+
+
+/* ==========================================================================
+   ESTADO 2: TABLET (Largura >= 600px)
+   ========================================================================== */
+
+   @media (min-width: 600px) {
+    
+    .cabecalho h1 span {
+      color: var(--cor-tablet);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .caixa {
+      height: 200px;
+      background-color: var(--cor-tablet);
+    }
+
+    .caixa-1 {
+      grid-column: span 2;
+      height: 120px;
+    }
+
+    .mini-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .caixa-2 .mini-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+      
+    .caixa-4 {
+      grid-column: span 2;
+    }
+   }
+
+/* ==========================================================================
+   ESTADO 3: DESKTOP (Largura >= 1024px)
+   ========================================================================== */
+
+  @media (min-width: 1024px) {
+
+  .cabecalho h1 span {
+    color: var(--cor-desktop);
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 30px;
+  }
+
+  .caixa-1 {
+    height: 600px;
+    width: 500px;
+  }
+
+  .caixa-2 {
+    height: 600px;
+    width: 400px;
+  }
+
+  .caixa {
+    height: 600px;
+  }
+
+  }

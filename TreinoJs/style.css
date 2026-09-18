@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-main: #120926;        /* Fundo da página (Roxo Profundo) */
+    --bg-card: #1c1038;        /* Fundo de containers/cards */
+
+    --color-title: #00ffcc;
+    --color-subtitle: #ff7700;
+    --color-text: #e2daff;
+    --color-number: #ffe600;
+
+    --color-correct: #00ff88;
+    --color-wrong: #ff0055;
+
+    --bg-gradient-main: linear-gradient(155deg, #0d061a 0%, #130723 25%, #19082d 50%, #260a42 100%);
+    --bg-gradient-neon: linear-gradient(155deg, #6f3ff4 0%, #7e3aea 25%, #8c33df 50%, #992ad5 100%);
+    --bg-card: rgba(28, 16, 56, 0.8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+}
+
+
+body{
+    background: var(--bg-gradient-main);
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 1px var(--color-subtitle);
+    background-color: var(--bg-card);
+}
+
+header h1 {
+    text-align: center;
+    color: var(--color-title);
+    margin-bottom: 30px;
+}
+
+header h2 {
+    text-align: center;
+    color: var(--color-text);
+}
+
+main{
+    display: flex;
+    justify-content:center;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#numero1{
+    color: var(--color-number);
+    margin-right: 30px;
+    font-size: 5rem;
+}
+
+#numero2{
+    color: var(--color-number);
+    margin-left: 30px;
+    font-size: 5rem;
+}
+
+#adicao{
+    color: var(--color-number);
+    font-size: 4rem;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer input {
+    width: 200px;
+    height: 100px;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--color-subtitle);
+    background-color: var(--bg-main);
+    color: var(--color-subtitle);
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--color-title);
+    box-shadow: 0 0 15px rgba(255, 0, 242, 0.6);
+}
+
+.respostaCerta {
+    font-size: 2rem;
+    color: var(--color-correct);
+    margin-top: 30px;
+}
+
+.respostaErrada {
+    font-size: 2rem;
+    color: var(--color-wrong);
+    margin-top: 30px;
+}
